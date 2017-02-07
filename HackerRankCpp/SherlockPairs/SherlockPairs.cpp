@@ -14,12 +14,12 @@ namespace SherlockPairs{
 //      1 <= N    <= 1e5
 //      1 <= A[i] <= 1e6
 //	-----------------------------------	---------------------------	-------------------------------	--------------------
-    long                                getPairs                    (std::vector <int> a)           {
-        long sum = 0;
+    long long                           getPairs                    (std::vector <int> a)           {
+        long long sum = 0;
         int  len = a.size();
         for (int i = 1; i < len; i++) {
-            long c = 1;
-            int p = a[i - 1], p1;
+            long long c = 1;
+            long p = a[i - 1], p1;
             while (i < len && (p1 = a[i]) == p) {
                 c++;
                 p = p1;
@@ -32,7 +32,6 @@ namespace SherlockPairs{
 //	-----------------------------------	---------------------------	-------------------------------	--------------------
     int
 	Solution::                          main						()                              {
-        std::cout << "hello,\n I'm Sherlok Pairs\n";
         int nt;
         std::cin >> nt;
         for (int tn = 0; tn < nt; tn++) {
@@ -46,7 +45,7 @@ namespace SherlockPairs{
             }
             
             std::sort(A.begin(),A.end());
-            int r = getPairs(A);
+            long long r = getPairs(A);
             std::cout << r << "\n";
         }
 
