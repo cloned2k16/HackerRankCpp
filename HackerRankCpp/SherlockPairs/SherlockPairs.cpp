@@ -46,7 +46,7 @@ namespace SherlockPairs{
             
             std::sort(A.begin(),A.end());
             long long r = getPairs(A);
-            std::cout << r << "\n";
+            std::cout << r << std::endl;
         }
 
 		return 0;

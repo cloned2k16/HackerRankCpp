@@ -52,7 +52,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="SherlockPermutations\input00.txt" />
+    <Text Include="SherlockPermutations\output00.txt" />
     <Text Include="SherlockPairs\input00.txt" />
+    <Text Include="SherlockPairs\input03.txt" />
     <Text Include="SherlockPairs\output00.txt" />
+    <Text Include="SherlockPairs\output03.txt" />
   </ItemGroup>
 </Project>

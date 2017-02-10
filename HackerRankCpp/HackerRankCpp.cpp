@@ -152,7 +152,7 @@
 
             test("SherlockPairs"            , { 0 , 3 });
 
-            test("SherlockPermutations"     , { 7 });
+            test("SherlockPermutations"     , { 0 });
         }
         else {
 
