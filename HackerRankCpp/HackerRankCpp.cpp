@@ -12,19 +12,19 @@
 #include "string"                        // std::getline !!
 
 #include "SolutionBase.h"
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     struct                              _INIT                       {
-	                                    _INIT                       ()                              {
-		    std::cout << "_INIT finished" << std::endl;
-	    }
+                                        _INIT                       ()                              {
+            std::cout << "_INIT finished" << std::endl;
+        }
     };
     _INIT                               static_init;
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     static std::streambuf *             cinbuf;
     static std::streambuf *             coutbuf;
     static const int                    max_path_len                = 1024;
     static char                         progName                    [max_path_len];
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     std::streambuf *                    redirect_from               (std::string fileName)          {
         std::ifstream in(fileName);
         std::streambuf * cinbuf = std::cin.rdbuf();                                                 //  save org buff
@@ -33,25 +33,25 @@
         std::cin.rdbuf  (in.rdbuf());                                                               //  redirect std::cin to fileName
         return cinbuf;                                                                              //  OK
     }
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     std::streambuf *                    redirect_to                 (std::string fileName)          {
         std::ofstream out(fileName);
         std::streambuf * coutbuf = std::cout.rdbuf();                                               //  save org buff
         std::cout.rdbuf(out.rdbuf());                                                               //  redirect std::cout to fileName
         return coutbuf;                                                                             //  OK
     }
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     bool                               exist                        (const char * fileName)         {
         struct stat buffer;
         return (stat(fileName, &buffer) == 0);
     }
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     int                                 test                        (char * name
                                                                     , std::vector <int> cases )     {
-	    IFactory* factory = SolutionBase::solutionFactory()[name];
-	    if (factory != NULL) {
+        IFactory* factory = SolutionBase::solutionFactory()[name];
+        if (factory != NULL) {
             for (unsigned int tc=0; tc < cases.size() ;tc++){
-		        SolutionBase* sol = factory->create();
+                SolutionBase* sol = factory->create();
                 if (sol){
                     std::string path (progName);
                     std::size_t pos = path.find_last_of("\\");
@@ -133,15 +133,15 @@
                     
                 }
             }
-	    }
-	    else {
-		    std::cout << "sorry can't find class for " << name << std::endl;
-	    }
-	    return 0;
+        }
+        else {
+            std::cout << "sorry can't find class for " << name << std::endl;
+        }
+        return 0;
     }
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
     int                                 main                        (int argc, char* argv [])       {
-	    std::cout << "here we go" << std::endl;
+        std::cout << "here we go" << std::endl;
         if (argc<=1){
             if (std::strlen(argv[0]) >= max_path_len) { // >= !! 
                 std::cerr << "Unexpected program name / path much too long!";
@@ -158,7 +158,7 @@
 
         }
         _getch();
-    	return 0;
+        return 0;
     }   
-//	-----------------------------------	---------------------------	-------------------------------	--------------------
+//  ----------------------------------- --------------------------- ------------------------------- --------------------
 
