@@ -134,6 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AlgorithmicCrush\AlgorithmicCrush.h" />
     <ClInclude Include="SherlockPairs\SherlockPairs.h" />
     <ClInclude Include="SherlockPermutations\SherlockPermutations.h" />
     <ClInclude Include="SolutionBase.h" />
@@ -141,6 +142,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlgorithmicCrush\AlgorithmicCrush.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="HackerRankCpp.cpp" />
     <ClCompile Include="SherlockPairs\SherlockPairs.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -159,6 +163,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="AlgorithmicCrush\input07.txt" />
+    <Text Include="AlgorithmicCrush\output07.txt" />
     <Text Include="SherlockPairs\input00.txt" />
     <Text Include="SherlockPairs\input03.txt" />
     <Text Include="SherlockPairs\output00.txt" />

@@ -33,6 +33,9 @@
     <ClInclude Include="SherlockPairs\SherlockPairs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AlgorithmicCrush\AlgorithmicCrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -50,6 +53,9 @@
     <ClCompile Include="SolutionBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AlgorithmicCrush\AlgorithmicCrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="SherlockPermutations\input00.txt" />
@@ -58,5 +64,7 @@
     <Text Include="SherlockPairs\input03.txt" />
     <Text Include="SherlockPairs\output00.txt" />
     <Text Include="SherlockPairs\output03.txt" />
+    <Text Include="AlgorithmicCrush\input07.txt" />
+    <Text Include="AlgorithmicCrush\output07.txt" />
   </ItemGroup>
 </Project>

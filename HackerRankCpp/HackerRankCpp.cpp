@@ -106,7 +106,7 @@
 
                             if (o.size() == r.size()) {
                                 bool error=false;
-                                for (int ln = 0; ln < o.size(); ln++) {
+                                for (size_t ln = 0; ln < o.size(); ln++) {
                                     if (o[ln] != r[ln]) {
                                         std::cerr << "ERROR at line: " << (ln + 1) << " ( " << o[ln] << " != " << r[ln] << ")" << std::endl;
                                         error=true;
@@ -151,8 +151,8 @@
             //std::cout << "args: " << progName << std::endl;
 
             test("SherlockPairs"            , { 0 , 3 });
-
             test("SherlockPermutations"     , { 0 });
+            test("AlgorithmicCrush"         , { 7 });
         }
         else {
 
